@@ -34,21 +34,18 @@ export function HomeContent({ locale }: Props) {
             image={akagawara}
             title={t(dict.home.pillars.tile.title)}
             body={t(dict.home.pillars.tile.body)}
-            icon="🏛️"
             alt={t({ ja: "赤瓦の屋根とシーサー", en: "Red-tile roof with a shisa" })}
           />
           <Pillar
             image={ryukyuKaze}
             title={t(dict.home.pillars.wind.title)}
             body={t(dict.home.pillars.wind.body)}
-            icon="🌿"
             alt={t({ ja: "海を望む縁側", en: "Engawa veranda facing the sea" })}
           />
           <Pillar
             image={teshigoto}
             title={t(dict.home.pillars.hand.title)}
             body={t(dict.home.pillars.hand.body)}
-            icon="🍜"
             alt={t({ ja: "手打ちの沖縄そば麺", en: "Hand-cut Okinawa soba noodles" })}
           />
         </div>
@@ -148,13 +145,11 @@ function Pillar({
   image,
   title,
   body,
-  icon,
   alt,
 }: {
   image: import("next/image").StaticImageData;
   title: string;
   body: string;
-  icon: string;
   alt: string;
 }) {
   return (
@@ -175,12 +170,6 @@ function Pillar({
 
       {/* テキスト */}
       <div className="absolute inset-x-0 bottom-0 p-6 text-shikkui">
-        <span
-          className="inline-flex items-center justify-center w-11 h-11 mb-3 rounded-full bg-shikkui/95 text-2xl shadow-lg"
-          aria-hidden
-        >
-          {icon}
-        </span>
         <h3 className="font-serif text-2xl mb-1.5 drop-shadow-sm">{title}</h3>
         <p className="text-sm leading-relaxed text-shikkui/85">{body}</p>
         {/* ホバーで伸びる赤瓦色のライン */}

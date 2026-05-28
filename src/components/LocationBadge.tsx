@@ -1,5 +1,5 @@
 import { shop, type Locale } from "@/lib/shop";
-import { dict, tr } from "@/lib/i18n";
+import { tr } from "@/lib/i18n";
 
 type Props = { locale: Locale };
 
@@ -9,7 +9,6 @@ export function LocationBadge({ locale }: Props) {
   return (
     <div className="bg-akagawara text-shikkui py-6 px-4">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 text-center">
-        <p className="font-serif text-base sm:text-lg tracking-wider">{t(dict.home.locationLead)}</p>
         <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-sm sm:text-base font-medium">
           <span className="flex items-center gap-2">
             <PinIcon />
